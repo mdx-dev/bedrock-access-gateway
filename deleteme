@@ -1,0 +1,29 @@
+curl http://0.0.0.0:32773/health
+
+curl http://bedrock-proxy.aes.zdidata.com/api/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer bedrock" \
+  -d '{
+    "model": "anthropic.claude-3-sonnet-20240229-v1:0",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello!"
+      }
+    ]
+  }' | more
+
+'{
+    "model": "claude-3-5-sonnet-20241022",
+    "max_tokens": 8192,
+    "messages": [
+        {"role": "user", "content": [
+            {"type": "image", "source": {
+                "type": "base64",
+                "media_type": "'$IMAGE_MEDIA_TYPE'",
+                "data": "'$IMAGE_BASE64'"
+            }},
+            {"type": "text", "text": "What is in the above image?"}
+        ]}
+    ]
+}'

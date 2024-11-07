@@ -1,0 +1,3 @@
+---
+app_name: bedrockaccessgateway
+docker_repository: vitals/services

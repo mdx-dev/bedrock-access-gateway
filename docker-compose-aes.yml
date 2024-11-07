@@ -1,0 +1,26 @@
+version: '2'
+
+x-deployment:
+  api:
+    deployment_maximum_percent: '200'
+    deployment_minimum_healthy_percent: '100'
+    desired_count: 1
+    dns_entries:
+      - bedrock-proxy.aes.zdidata.com
+    healthcheck:
+      path: '/health'
+      interval: '30'
+      healthy_threshold: '3'
+      unhealthy_threshold: '5'
+    loadbalancer: internal
+    force_ssl: true
+
+services:
+  api:
+    extends:
+      file: docker-compose-base.yml
+      service: api
+    environment:
+      AWS_REGION: us-east-1
+      DEBUG: 'true'
+      LOGSTASH_FIELDS: organization=services,application=bedrock-access-gateway

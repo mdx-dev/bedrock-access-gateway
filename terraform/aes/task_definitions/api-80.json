@@ -1,0 +1,38 @@
+[
+  {
+    "environment": [
+      {
+        "name": "AWS_REGION",
+        "value": "us-east-1"
+      },
+      {
+        "name": "DEBUG",
+        "value": "true"
+      },
+      {
+        "name": "LOGSTASH_FIELDS",
+        "value": "organization=services,application=bedrock-access-gateway"
+      },
+      {
+        "name": "SECRET_STORE",
+        "value": "${secret_store}"
+      },
+      {
+        "name": "MDX_SERVICE_ENVIRONMENT",
+        "value": "aes"
+      }
+    ],
+    "essential": true,
+    "image": "vitals/services:bedrock-access-gateway",
+    "memory": 1024,
+    "name": "bedrockaccessgateway-api-80",
+    "portMappings": [
+      {
+        "containerPort": 80
+      }
+    ],
+    "mountPoints": [
+
+    ]
+  }
+]

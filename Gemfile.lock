@@ -1,0 +1,41 @@
+GIT
+  remote: git@github.com:mdx-dev/mdx-service.git
+  revision: 6edc4cfea98ea042e41c17f27c3a88ad59dbdfcd
+  specs:
+    mdx-service (1.1.0)
+      aws-sdk-core (>= 2)
+      aws-sdk-ec2 (~> 1)
+      aws-sdk-route53 (~> 1)
+      hashie
+      highline
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws-eventstream (1.3.0)
+    aws-partitions (1.1001.0)
+    aws-sdk-core (3.212.0)
+      aws-eventstream (~> 1, >= 1.3.0)
+      aws-partitions (~> 1, >= 1.992.0)
+      aws-sigv4 (~> 1.9)
+      jmespath (~> 1, >= 1.6.1)
+    aws-sdk-ec2 (1.487.0)
+      aws-sdk-core (~> 3, >= 3.210.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-route53 (1.104.0)
+      aws-sdk-core (~> 3, >= 3.210.0)
+      aws-sigv4 (~> 1.5)
+    aws-sigv4 (1.10.1)
+      aws-eventstream (~> 1, >= 1.0.2)
+    hashie (5.0.0)
+    highline (2.1.0)
+    jmespath (1.6.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mdx-service!
+
+BUNDLED WITH
+   2.1.4
